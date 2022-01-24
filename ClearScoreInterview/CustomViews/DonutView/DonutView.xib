@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DonutView" customModule="ClearScoreInterview" customModuleProvider="target">
+            <connections>
+                <outlet property="outOfLabel" destination="xbN-Sz-Q6X" id="Dhv-7A-BG3"/>
+                <outlet property="scoreLabel" destination="Gw3-rQ-ghy" id="9HM-Uz-Ecu"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="out of 700" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xbN-Sz-Q6X">
+                    <rect key="frame" x="111" y="198" width="78.5" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="375" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gw3-rQ-ghy">
+                    <rect key="frame" x="115" y="126" width="70.5" height="48"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                    <color key="textColor" red="0.9627395272" green="0.90244960780000005" blue="0.61170995240000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your credit score is" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nvj-uR-Cjx">
+                    <rect key="frame" x="77" y="81" width="146" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="xbN-Sz-Q6X" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="6Z3-Vo-CGC"/>
+                <constraint firstItem="nvj-uR-Cjx" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="EbF-27-QHC"/>
+                <constraint firstItem="xbN-Sz-Q6X" firstAttribute="top" secondItem="Gw3-rQ-ghy" secondAttribute="bottom" constant="24" id="Hm1-o6-wj3"/>
+                <constraint firstItem="Gw3-rQ-ghy" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="QmS-jU-aGy"/>
+                <constraint firstItem="Gw3-rQ-ghy" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="muI-1t-2SW"/>
+                <constraint firstItem="nvj-uR-Cjx" firstAttribute="bottom" secondItem="Gw3-rQ-ghy" secondAttribute="top" constant="-24" id="zPF-7z-Ndr"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="139" y="123"/>
+        </view>
+    </objects>
+</document>

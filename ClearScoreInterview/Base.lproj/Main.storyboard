@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kxQ-js-BcD">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Credit Score View Controller-->
+        <scene sceneID="hBp-O4-6ht">
+            <objects>
+                <viewController storyboardIdentifier="CreditScore" id="cgR-TK-VPJ" customClass="CreditScoreViewController" customModule="ClearScoreInterview" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cEg-JE-tlv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IJF-Xh-uj6" customClass="DonutView" customModule="ClearScoreInterview" customModuleProvider="target">
+                                <rect key="frame" x="57" y="325" width="300" height="300"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="Iy9-vw-240"/>
+                                    <constraint firstAttribute="width" secondItem="IJF-Xh-uj6" secondAttribute="height" multiplier="1:1" id="s9S-G8-Tn4"/>
+                                </constraints>
+                            </view>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="cnt-G4-JxZ">
+                                <rect key="frame" x="188.5" y="456.5" width="37" height="37"/>
+                                <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Vx6-6G-tgn"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="IJF-Xh-uj6" firstAttribute="centerY" secondItem="Vx6-6G-tgn" secondAttribute="centerY" id="EVM-Yu-Z3E"/>
+                            <constraint firstItem="cnt-G4-JxZ" firstAttribute="centerX" secondItem="Vx6-6G-tgn" secondAttribute="centerX" id="KiI-da-e3v"/>
+                            <constraint firstItem="IJF-Xh-uj6" firstAttribute="centerX" secondItem="Vx6-6G-tgn" secondAttribute="centerX" id="ich-h3-AlF"/>
+                            <constraint firstItem="cnt-G4-JxZ" firstAttribute="centerY" secondItem="Vx6-6G-tgn" secondAttribute="centerY" id="rJU-Ja-El4"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="gQ9-De-FZt"/>
+                    <connections>
+                        <outlet property="donutView" destination="IJF-Xh-uj6" id="Lvy-ur-Bvs"/>
+                        <outlet property="loadingView" destination="cnt-G4-JxZ" id="gcc-Z8-jOF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wGF-gL-gsX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="955.07246376811599" y="27.455357142857142"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="n0l-kH-ezH">
+            <objects>
+                <viewController storyboardIdentifier="Details" id="BgB-wE-dEC" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="67h-nt-k1J">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="q9M-kv-dEb"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Aaq-gA-yQa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1839" y="27"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="oEh-Z3-AnN">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kxQ-js-BcD" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="peU-Rt-MYB">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="cgR-TK-VPJ" kind="relationship" relationship="rootViewController" id="wEP-QE-Evh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Brn-dn-mnv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="44.927536231884062" y="27.455357142857142"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
