@@ -7,13 +7,39 @@
 
 import Foundation
 
-class CreditDataClient {
+final class CreditDataClient: APIClientProtocol {
     
-    private static func fetchCreditData(_ completion: @escaping (Result<Data, Error>) -> Void) {
-        if let url = URL(string: AppConstants.APIEndpoint){
+    func getCreditData(_ completion: @escaping (Result<CreditHistory, Error>) -> Void) {
+        fetchCreditData(urlString: AppConstants.APIEndpoint) { result in
+            switch result {
+            case .success(let data):
+                let decoder = JSONDecoder()
+                do {
+                    let decoded = try decoder.decode(CreditHistory.self, from: data)
+                    completion(.success(decoded))
+                }
+                catch {
+                    completion(.failure(APICallErrors.decodingError))
+                }
+            case .failure(let error):
+                completion(.failure(error))
+            }
+            
+        }
+    }
+}
+
+protocol APIClientProtocol {
+    func getCreditData(_ completion: @escaping (Result<CreditHistory, Error>) -> Void)
+    func fetchCreditData(urlString: String, _ completion: @escaping (Result<Data, Error>) -> Void)
+}
+
+extension APIClientProtocol {
+    func fetchCreditData(urlString: String, _ completion: @escaping (Result<Data, Error>) -> Void) {
+        if let url = URL(string: urlString){
             let task = URLSession.shared.dataTask(with: url) { (data: Data?, response: URLResponse?, error: Error?) -> Void in
-                if let error = error {
-                    completion(.failure(error))
+                if error != nil {
+                    completion(.failure(APICallErrors.dataTaskError))
                 }
                 
                 if let data = data {
@@ -23,24 +49,9 @@ class CreditDataClient {
             task.resume()
         }
     }
-    
-    static func getCreditData(_ completion: @escaping (Result<CreditHistory, Error>) -> Void) {
-        fetchCreditData { result in
-            switch result {
-            case .success(let data):
-                let decoder = JSONDecoder()
-                do {
-                    let decoded = try decoder.decode(CreditHistory.self, from: data)
-                    completion(.success(decoded))
-                }
-                catch let error {
-                    completion(.failure(error))
-                }
-            case .failure(let error):
-                completion(.failure(error))
-            }
-            
-        }
-    }
-    
+}
+
+enum APICallErrors: Error, Equatable {
+    case dataTaskError
+    case decodingError
 }

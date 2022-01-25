@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CreditScoreViewController: UIViewController, CreditScoreViewModelProtocol {
+class CreditScoreViewController: UIViewController, Storyboarded, CreditScoreViewModelProtocol {
     
     @IBOutlet var donutView: DonutView!
     @IBOutlet var loadingView: UIActivityIndicatorView!
@@ -17,15 +17,15 @@ class CreditScoreViewController: UIViewController, CreditScoreViewModelProtocol 
         return vm
     }()
     
-    var creditData: CreditHistory?
-
+    weak var coordinator: MainCoordinator?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        self.navigationController?.title = AppConstants.DashboardNavTitle
+        
         donutView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(donutViewTapped)))
         
         viewModel.delegate = self
+        viewModel.makeCreditCheck()
         
         loadingView.startAnimating()
     }
@@ -42,19 +42,15 @@ class CreditScoreViewController: UIViewController, CreditScoreViewModelProtocol 
         }
         switch result {
         case .success(let creditData):
-            self.creditData = creditData
             fillDonutView(creditData: creditData)
         case .failure(let error):
             showErrorAlert(error: error)
         }
     }
-
+    
     @objc func donutViewTapped() {
-        if let creditData = creditData {
-            let storyboard = UIStoryboard(name: AppConstants.MainStoryboard, bundle: nil)
-            let vc = storyboard.instantiateViewController(withIdentifier: AppConstants.DetailsSID)
-            self.navigationController?.pushViewController(vc, animated: true)
-        }
+        guard let creditData = viewModel.creditData else { return }
+        coordinator?.showCreditScoreDetails(creditData: creditData)
     }
     
     func fillDonutView(creditData: CreditHistory) {

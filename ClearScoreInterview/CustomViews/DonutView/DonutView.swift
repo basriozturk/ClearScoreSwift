@@ -65,7 +65,7 @@ class DonutView: CustomView {
         createCircularPath()
         scoreLabel.text = String(score)
         outOfLabel.text = "out of " + String(outOf)
-        progressAnimation(duration: 2, progress: CGFloat(score) / CGFloat(outOf))
+        progressAnimation(duration: 1, progress: CGFloat(score) / CGFloat(outOf))
     }
     
 }

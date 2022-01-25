@@ -11,17 +11,19 @@ class CreditScoreViewModel {
     
     weak var delegate: CreditScoreViewModelProtocol?
     
-    var creditHistory: CreditHistory?
+    var creditData: CreditHistory?
+    var apiClient: APIClientProtocol
     
     init() {
-        makeCreditCheck()
+        apiClient = CreditDataClient()
     }
     
     func makeCreditCheck() {
-        CreditDataClient.getCreditData { result in
+        apiClient.getCreditData { result in
             switch result {
-            case .success(let creditHistory):
-                self.delegate?.creditDataReceived(withResult: .success(creditHistory))
+            case .success(let creditData):
+                self.creditData = creditData
+                self.delegate?.creditDataReceived(withResult: .success(creditData))
             case .failure(let error):
                 self.delegate?.creditDataReceived(withResult: .failure(error))
             }

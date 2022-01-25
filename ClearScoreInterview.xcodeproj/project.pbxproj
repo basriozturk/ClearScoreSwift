@@ -13,7 +13,6 @@
 		9D426A5A279A3CD5002EC1C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D426A58279A3CD5002EC1C1 /* Main.storyboard */; };
 		9D426A5C279A3CD6002EC1C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D426A5B279A3CD6002EC1C1 /* Assets.xcassets */; };
 		9D426A5F279A3CD6002EC1C1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D426A5D279A3CD6002EC1C1 /* LaunchScreen.storyboard */; };
-		9D426A6A279A3CD6002EC1C1 /* ClearScoreInterviewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D426A69279A3CD6002EC1C1 /* ClearScoreInterviewTests.swift */; };
 		9D426A74279A3CD6002EC1C1 /* ClearScoreInterviewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D426A73279A3CD6002EC1C1 /* ClearScoreInterviewUITests.swift */; };
 		9D426A76279A3CD6002EC1C1 /* ClearScoreInterviewUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D426A75279A3CD6002EC1C1 /* ClearScoreInterviewUITestsLaunchTests.swift */; };
 		9D426A86279A3F97002EC1C1 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 9D426A85279A3F97002EC1C1 /* data.json */; };
@@ -27,8 +26,13 @@
 		9D426A9C279A4B0B002EC1C1 /* CreditScoreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D426A9B279A4B0B002EC1C1 /* CreditScoreViewModel.swift */; };
 		9D426A9E279A4D20002EC1C1 /* CreditDataClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D426A9D279A4D20002EC1C1 /* CreditDataClient.swift */; };
 		9D47D195279E23CC0071E814 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D47D194279E23CC0071E814 /* DetailsViewController.swift */; };
-		9D47D199279E23F80071E814 /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D47D198279E23F80071E814 /* DetailsViewModel.swift */; };
 		9D47D19C279E29C70071E814 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D47D19B279E29C70071E814 /* Storyboarded.swift */; };
+		9D47D19E279E38F30071E814 /* UIKit-Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D47D19D279E38F30071E814 /* UIKit-Extensions.swift */; };
+		9DEC4E52279F132500A9C4C5 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEC4E51279F132500A9C4C5 /* MainCoordinator.swift */; };
+		9DEC4E54279F2AE400A9C4C5 /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEC4E53279F2AE400A9C4C5 /* DetailsViewModel.swift */; };
+		9DEC4E56279F2F9300A9C4C5 /* MockAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEC4E55279F2F9300A9C4C5 /* MockAPIClient.swift */; };
+		9DEC4E5D279F38CA00A9C4C5 /* CreditHistoryViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEC4E5C279F38CA00A9C4C5 /* CreditHistoryViewModelTests.swift */; platformFilter = ios; };
+		9DEC4E5F279F6FD700A9C4C5 /* APIClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEC4E5E279F6FD700A9C4C5 /* APIClientTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,7 +62,6 @@
 		9D426A5E279A3CD6002EC1C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9D426A60279A3CD6002EC1C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9D426A65279A3CD6002EC1C1 /* ClearScoreInterviewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClearScoreInterviewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9D426A69279A3CD6002EC1C1 /* ClearScoreInterviewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearScoreInterviewTests.swift; sourceTree = "<group>"; };
 		9D426A6F279A3CD6002EC1C1 /* ClearScoreInterviewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClearScoreInterviewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D426A73279A3CD6002EC1C1 /* ClearScoreInterviewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearScoreInterviewUITests.swift; sourceTree = "<group>"; };
 		9D426A75279A3CD6002EC1C1 /* ClearScoreInterviewUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearScoreInterviewUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -73,8 +76,13 @@
 		9D426A9B279A4B0B002EC1C1 /* CreditScoreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditScoreViewModel.swift; sourceTree = "<group>"; };
 		9D426A9D279A4D20002EC1C1 /* CreditDataClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditDataClient.swift; sourceTree = "<group>"; };
 		9D47D194279E23CC0071E814 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
-		9D47D198279E23F80071E814 /* DetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
 		9D47D19B279E29C70071E814 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
+		9D47D19D279E38F30071E814 /* UIKit-Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIKit-Extensions.swift"; sourceTree = "<group>"; };
+		9DEC4E51279F132500A9C4C5 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		9DEC4E53279F2AE400A9C4C5 /* DetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
+		9DEC4E55279F2F9300A9C4C5 /* MockAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAPIClient.swift; sourceTree = "<group>"; };
+		9DEC4E5C279F38CA00A9C4C5 /* CreditHistoryViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditHistoryViewModelTests.swift; sourceTree = "<group>"; };
+		9DEC4E5E279F6FD700A9C4C5 /* APIClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,7 +161,8 @@
 		9D426A68279A3CD6002EC1C1 /* ClearScoreInterviewTests */ = {
 			isa = PBXGroup;
 			children = (
-				9D426A69279A3CD6002EC1C1 /* ClearScoreInterviewTests.swift */,
+				9DEC4E5C279F38CA00A9C4C5 /* CreditHistoryViewModelTests.swift */,
+				9DEC4E5E279F6FD700A9C4C5 /* APIClientTests.swift */,
 			);
 			path = ClearScoreInterviewTests;
 			sourceTree = "<group>";
@@ -180,7 +189,7 @@
 			isa = PBXGroup;
 			children = (
 				9D426A9B279A4B0B002EC1C1 /* CreditScoreViewModel.swift */,
-				9D47D198279E23F80071E814 /* DetailsViewModel.swift */,
+				9DEC4E53279F2AE400A9C4C5 /* DetailsViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -206,20 +215,15 @@
 		9D426A90279A4363002EC1C1 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				9D47D19A279E29AE0071E814 /* Coordinator */,
+				9D47D19B279E29C70071E814 /* Storyboarded.swift */,
 				9D426A91279A437E002EC1C1 /* AppConstants.swift */,
 				9D426A9D279A4D20002EC1C1 /* CreditDataClient.swift */,
 				9D29CB90279C6D48001FC7EF /* CustomView.swift */,
+				9D47D19D279E38F30071E814 /* UIKit-Extensions.swift */,
+				9DEC4E51279F132500A9C4C5 /* MainCoordinator.swift */,
+				9DEC4E55279F2F9300A9C4C5 /* MockAPIClient.swift */,
 			);
 			path = Helpers;
-			sourceTree = "<group>";
-		};
-		9D47D19A279E29AE0071E814 /* Coordinator */ = {
-			isa = PBXGroup;
-			children = (
-				9D47D19B279E29C70071E814 /* Storyboarded.swift */,
-			);
-			path = Coordinator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,6 +297,7 @@
 					};
 					9D426A64279A3CD6002EC1C1 = {
 						CreatedOnToolsVersion = 13.1;
+						LastSwiftMigration = 1310;
 						TestTargetID = 9D426A4E279A3CD4002EC1C1;
 					};
 					9D426A6E279A3CD6002EC1C1 = {
@@ -357,18 +362,21 @@
 			files = (
 				9D426A53279A3CD5002EC1C1 /* AppDelegate.swift in Sources */,
 				9D426A9E279A4D20002EC1C1 /* CreditDataClient.swift in Sources */,
+				9DEC4E56279F2F9300A9C4C5 /* MockAPIClient.swift in Sources */,
 				9D426A98279A47F8002EC1C1 /* CaochingSummary.swift in Sources */,
+				9DEC4E54279F2AE400A9C4C5 /* DetailsViewModel.swift in Sources */,
 				9D426A92279A437E002EC1C1 /* AppConstants.swift in Sources */,
-				9D47D199279E23F80071E814 /* DetailsViewModel.swift in Sources */,
 				9D426A96279A47DA002EC1C1 /* CreditReportInfo.swift in Sources */,
 				9D426A9A279A4847002EC1C1 /* CreditHistory.swift in Sources */,
 				9D426A9C279A4B0B002EC1C1 /* CreditScoreViewModel.swift in Sources */,
 				9D426A8F279A433F002EC1C1 /* CreditScoreViewController.swift in Sources */,
+				9DEC4E52279F132500A9C4C5 /* MainCoordinator.swift in Sources */,
 				9D29CB91279C6D48001FC7EF /* CustomView.swift in Sources */,
 				9D426A55279A3CD5002EC1C1 /* SceneDelegate.swift in Sources */,
 				9D426A8B279A4082002EC1C1 /* DonutView.swift in Sources */,
 				9D47D195279E23CC0071E814 /* DetailsViewController.swift in Sources */,
 				9D47D19C279E29C70071E814 /* Storyboarded.swift in Sources */,
+				9D47D19E279E38F30071E814 /* UIKit-Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,7 +384,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9D426A6A279A3CD6002EC1C1 /* ClearScoreInterviewTests.swift in Sources */,
+				9DEC4E5D279F38CA00A9C4C5 /* CreditHistoryViewModelTests.swift in Sources */,
+				9DEC4E5F279F6FD700A9C4C5 /* APIClientTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,6 +403,7 @@
 /* Begin PBXTargetDependency section */
 		9D426A67279A3CD6002EC1C1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
+			platformFilter = ios;
 			target = 9D426A4E279A3CD4002EC1C1 /* ClearScoreInterview */;
 			targetProxy = 9D426A66279A3CD6002EC1C1 /* PBXContainerItemProxy */;
 		};
@@ -457,6 +467,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -518,6 +529,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -552,7 +564,6 @@
 				INFOPLIST_FILE = ClearScoreInterview/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -564,7 +575,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -575,12 +586,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 2ZBUJ7G4T5;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ClearScoreInterview/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -592,7 +602,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -601,6 +611,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2ZBUJ7G4T5;
@@ -612,9 +623,13 @@
 					"@loader_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bassbroapps.ClearScoreInterviewTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_PRECOMPILE_BRIDGING_HEADER = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ClearScoreInterview.app/ClearScoreInterview";
@@ -626,6 +641,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2ZBUJ7G4T5;
@@ -637,9 +653,12 @@
 					"@loader_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bassbroapps.ClearScoreInterviewTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_PRECOMPILE_BRIDGING_HEADER = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ClearScoreInterview.app/ClearScoreInterview";
